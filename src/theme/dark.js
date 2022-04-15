@@ -8,12 +8,12 @@ export default {
   },
 
   keys: {
-    mainKeys: "hsl(225, 21%, 49%)",
-    shadowMainKeys: "hsl(224, 28%, 35%)",
+    secondaryKeys: "hsl(225, 21%, 49%)",
+    shadowSecondaryKeys: "hsl(224, 28%, 35%)",
     deleteKey: "hsl(6, 63%, 50%)",
     shadowDeleteKey: "hsl(6, 70%, 34%)",
-    secondaryKey: "hsl(30, 25%, 89%)",
-    shadowSecondaryKey: "hsl(28, 16%, 65%)",
+    mainKeys: "hsl(30, 25%, 89%)",
+    shadowMainKeys: "hsl(28, 16%, 65%)",
   },
 
   text: {
