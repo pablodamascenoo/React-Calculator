@@ -16,6 +16,7 @@ body{
 
 main{
     height: 100vh;
+    overflow-y: scroll;
     background-color: ${(props) => props.theme.backgrounds.main};
 }
 
