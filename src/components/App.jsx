@@ -1,6 +1,7 @@
 import Reset from "../assets/global_styles/Reset";
 import Calculator from "./Calculator";
 import GlobalStyle from "../assets/global_styles/Global_style";
+import ScreenContext from "../contexts/ScreenContext";
 
 import dark from "../theme/dark";
 import light from "../theme/light";
@@ -12,6 +13,7 @@ import { useState } from "react";
 
 export default function App() {
   const [theme, SetTheme] = useState(JSON.parse(localStorage.getItem("theme")));
+  const [screenText, SetScreenText] = useState("");
 
   function changeTheme(value) {
     let themeChange = {};
@@ -40,7 +42,9 @@ export default function App() {
         <Reset />
         <GlobalStyle />
         <main>
-          <Calculator theme={theme} changeTheme={changeTheme} />
+          <ScreenContext.Provider value={{ screenText, SetScreenText }}>
+            <Calculator theme={theme} changeTheme={changeTheme} />
+          </ScreenContext.Provider>
         </main>
       </ThemeProvider>
     </>
