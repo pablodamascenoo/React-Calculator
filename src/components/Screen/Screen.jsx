@@ -1,7 +1,16 @@
 import React from "react";
+import { useContext } from "react";
 
 import { Container } from "./style";
 
+import ScreenContext from "../../contexts/ScreenContext";
+
 export default function Screen() {
-  return <Container></Container>;
+  const { screenText } = useContext(ScreenContext);
+
+  return (
+    <Container>
+      <p>{screenText}</p>
+    </Container>
+  );
 }
